@@ -1,11 +1,15 @@
 import random
 
-p = 0.3
-q = 0.3
+p = 0.2
+q = 0.4
 qsize = 0 #liczba osob w kolejce
+steps = 10000
 stany = [0]*10
+teoria = []
+for i in range(0,100):
+    teoria.append((p/q)**len(teoria)*(1-p/q)*steps)
 
-for steps in range(1,10000):
+for step in range(1,steps):
     x = random.random()
     if x < q:
         krok = -1  # cofamy się (liczebność kolejki maleje)
@@ -25,3 +29,4 @@ if len(stany) > 150:
 else:
     print(stany)
 print('Największy stan kolejki:', len(stany))
+print('Teoria(+3):\n', teoria[0:len(stany)+3])
