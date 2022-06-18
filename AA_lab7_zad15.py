@@ -37,5 +37,4 @@ else:
     print(stany)
 print('Największy stan kolejki:', len(stany))
 print('Teoria(+3):\n', teoria[0:len(stany)+3]) # wyświetlamy 3 dodatkowe stany, których nie odwiedzono ani razu
-print('\nŚredni czas powrotu do poszczególnych stanów:')
-print(sredni_czas_powrotu[0:len(stany)])
+print('\nŚredni czas powrotu do poszczególnych stanów:\n', sredni_czas_powrotu[0:len(stany)])
